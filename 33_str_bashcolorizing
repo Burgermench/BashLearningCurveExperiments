@@ -1,0 +1,40 @@
+#!/bin/bash/
+
+#part 1 - basics
+echo "+-[COLORIZING][BASICS]"
+echo "|"
+echo "+-+-[COLOR][BOLD][RESET]"
+code0="\e[0;31m" # red
+echo -e "| |$code0 for red text"
+code1="\e[1;31m" # bold red
+echo -e "| |$code1 for bold red text"
+code2="\e[0m" # resets
+echo -e "| |$code2 reset"
+
+#part 2 - foreground
+prefix="\e["
+plain="0;"
+bold="1;"
+reset="\e[0m"
+echo "|"
+echo "+-+-[BACKGROUND]"
+for i in $(seq 1 7)
+do
+	color="3"$i"m"
+	colorcode=$prefix$plain$color
+	emboldened=$prefix$bold$color
+	echo -e "| | $colorcode text $i $reset"
+	echo -e "| | $emboldened text $i $reset"
+done
+
+#part 3 - background
+echo "|"
+echo "+-+-[FOREGROUND]"
+for i in $(seq 1 7)
+do
+	color="4"$i"m"
+	colorcode=$prefix$plain$color
+	emboldened=$prefix$bold$color
+	echo -e "  | $colorcode text $i $reset"
+	echo -e "  | $colorcode text $i $reset"
+done

@@ -1,0 +1,6 @@
+#! /bin/bash/
+
+str1="horizontaltab\tuses"
+echo -e "The $str1 the tab width defined in the terminal configs."
+
+exit 0

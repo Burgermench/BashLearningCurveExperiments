@@ -1,0 +1,17 @@
+#! /usr/bin/bash
+
+hex={$1^^}
+echo "obase=10; ibase=16; $hex" | bc
+
+#[INFO]
+# [Synopsis]
+#  This script converts a number in hexadecimal format to decimal format.
+#  Takes an argument from stdin (hex number).
+#  Outputs the converted decimal number to stdout.
+# [USAGE]
+#  ./hexToDec.sh f8BEA40
+# [ANALYSIS]
+#  We are essentially just piping the input to a base calculator.
+#  The calculator doesnt support lower case letters so we had to
+#  capitalize any alphabetical characters.
+#[INFO]

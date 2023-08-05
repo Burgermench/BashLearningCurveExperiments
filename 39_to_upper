@@ -1,0 +1,17 @@
+#! /usr/bin/bash
+
+while read line
+do
+	line_uc=${line^^}
+	echo "$line_uc"
+done < "${1:-/dev/stdin}"
+
+# [INFO]
+# Upper case capitalizes all read strings.
+# Reads from stdin.
+# Prints to stdout.
+# Doesnt take parameters.
+# 	[USECASES]
+# 	toUpper.sh < file1.txt
+# 	toUpper.sh
+# [INFO]

@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+#[INTERSCRIPT][GET][LAST][NUMERATION]
+next=$( cd ~/Documents/engineering/research/lang/bash/refs ; ./51_next_prefix )
+#[SAMPLE][DIR][FOR][NON-NUMERATED][FILES]
+read -r -a arr_non_enum_files <<< $( ls -p | grep -v "/" | grep -v -E ^[0-9]\{1,10\}$_ | tr "\n" " " )
+#[ENUMERATE][THEM][ALL]
+for file in ${arr_non_enum_files[@]}
+do
+	( mv ${file} ${next}_${file} )
+	next=$(( next+1 ))
+done
+
+exit 0;

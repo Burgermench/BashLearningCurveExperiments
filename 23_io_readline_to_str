@@ -1,0 +1,8 @@
+#!/bin/bash/
+
+# This script reads an entire line as a string and prints it out
+
+read -p "[INPUT] your string: " str ;
+echo -e "\n[OUTPUT] your string: $str" ;
+
+exit 0;

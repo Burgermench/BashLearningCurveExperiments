@@ -1,0 +1,27 @@
+#!/bin/bash/
+
+str=""
+counter=0
+
+while IFS= read -r line; do
+	charcount=${#line};
+	printf 'charcount: %d' "$charcount";
+	if [ $charcount -eq 1 ]; then
+		if [ $line == "«" ]; then
+			break;
+		fi;
+	fi;
+	str=$str$line;
+	printf ' line: %d string: %s' "$counter" "$str";
+	counter=$(( counter + 1 ));
+done < "${1:-/dev/stdin}"
+
+counter=$(( counter - 1 ))
+printf '\ncount: %d\n' "$counter";
+
+exit 0;
+
+
+# This script reads multiple lines
+# into separate strings
+# and then prints them out.

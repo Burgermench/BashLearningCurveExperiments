@@ -1,0 +1,17 @@
+#! usr/bin/bash
+
+echo -e "\n - having written the script, you can invoke it by typing"
+echo -e "\t\t bash scriptname"
+echo "   or alternatively"
+echo -e "\t\t ./scriptname\n"
+
+echo " - however it would be much more convenient to run it from"
+echo -e "   anywhere in the directory tree.\n"
+
+echo " - as a final step, after testing and debugging, you would"
+echo "   likely want to move it to usr/local/bin (as root of course)"
+echo -e "   to make the script systemwide executable.\n"
+
+echo " - the script could then be invoked by simply typing:"
+echo -e "\t\t scriptname [ENTER]"
+echo -e "   directly from anywhere in the cli\n"

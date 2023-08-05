@@ -1,0 +1,11 @@
+#! /usr/bin/bash
+echo
+echo -e "\toctal\tbinary\tchar\tmeaning\n"
+echo -e "\t0\t000\t---\tdeny all access"
+echo -e "\t1\t001\t--x\tallow execute"
+echo -e "\t2\t010\t-w-\tallow write"
+echo -e "\t3\t011\t-wx\tallow write/execute"
+echo -e "\t4\t100\tr--\tallow read"
+echo -e "\t5\t101\tr-x\tallow read/execute"
+echo -e "\t6\t110\trw-\tallow read/write"
+echo -e "\t7\t111\trwx\tallow read/write/execute\n"

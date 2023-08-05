@@ -1,0 +1,6 @@
+#! /bin/bash
+
+echo -e "\nTo display the current working directory, use the following"
+echo "shell command:"
+echo -e -n "\tpwd\t"; pwd
+echo ""

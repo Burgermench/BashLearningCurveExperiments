@@ -1,0 +1,9 @@
+#! /bin/bash/
+
+str1="Hi i'm just a normal string, casually taking a stroll on the stream"
+echo "carriage return overwritting"
+str2="HI IM A VERY NAUGHTY STRING,"
+echo "$str1"
+echo -e "$str1\r$str2"
+
+exit 0

@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+#no args
+[ $# -ne 0 ] && { echo "[ERROR] $0 takes zero arguments, but received $#"; exit 1; }
+#get cmds in str format
+read -r -a strcmds <<< $( compgen -c | tr "\n" " " )
+#print with leading number for ease of navigation
+for str in ${strcmds[@]}
+do
+	echo -n "$i $str "
+	cat $( whatis $str )
+	echo
+	i=$(( i+1 ))
+done
+
+
+
+exit 0 ;

@@ -1,0 +1,13 @@
+#! /bin/bash/
+
+str1="\"This is a perfectly normal string\""
+echo "old: $str1"
+str2="1337"
+echo "hacker: $str2"
+echo -e "new: $str1\b\b\b\b\b\b\b$str2"
+
+exit 0
+
+
+#This script demonstrates the powerful use of
+#backspaces to overwrite concurrent line strings

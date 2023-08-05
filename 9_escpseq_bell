@@ -1,0 +1,9 @@
+#! /bin/bash
+
+echo -e "\a"
+
+exit 0
+
+#This script makes a bell noise
+#bell noise option must be activated
+#for the terminal to sound it

@@ -1,0 +1,6 @@
+#! /bin/bash
+
+echo -e "\nTo display the current time and date, use the following"
+echo "shell command:"
+echo -e -n "\tdate \t"; date
+echo -e "\n"
